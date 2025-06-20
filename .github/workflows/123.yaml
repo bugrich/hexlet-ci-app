@@ -1,21 +1,25 @@
 name: bugrichcool
 
 on: push
+
 jobs:
- build:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-            - uses: actions/checkout@v4
-            - name: Set up Node.js
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-            node-version: '20'
+          node-version: '20'
 
       - name: Make setup
         run: make setup
 
       - name: Make Lint
-       run: make lint
+        run: make lint
 
       - name: Make test
-       run: make test
+        run: make test
+
