@@ -1,19 +1,12 @@
 name: bugrichcool
-# on – определяет события, которые запускают воркфлоу
+
 on: push
 jobs:
-  # build – произвольно выбранное имя задания
-  # их может быть больше одного
-  build:
-    # операционная система для работы воркфлоу
+ build:
     runs-on: ubuntu-latest
-    steps: # список шагов, которые надо выполнить
-      # экшен — выполняет какую-то задачу
-      # checkout — клонирует репозиторий
-      - uses: actions/checkout@v4
-      # run – произвольная bash-команда
-      # ls -la выведет содержимое текущего репозитория
-      -name: Set up Node.js
+    steps:
+            - uses: actions/checkout@v4
+            - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
             node-version: '20'
@@ -21,8 +14,8 @@ jobs:
       - name: Make setup
         run: make setup
 
-      -name: Make Lint
+      - name: Make Lint
        run: make lint
 
-      -name: Make test
+      - name: Make test
        run: make test
