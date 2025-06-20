@@ -1,5 +1,7 @@
 # Example app for CI Hexlet course
 
+[![bugrichcool](https://github.com/bugrich/hexlet-ci-app/actions/workflows/123.yaml/badge.svg)](https://github.com/bugrich/hexlet-ci-app/actions/workflows/123.yaml)
+
 Starting boilerplate of [Strapi](https://strapi.io/) application
 
 ## System requirements
